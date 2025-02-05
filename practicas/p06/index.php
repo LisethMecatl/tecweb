@@ -8,6 +8,8 @@
 </head>
 
 <body>
+    <h1>Practica 6:Uso de funciones, ciclos y arreglos en PHP</h1>
+
     <?php
     include("src/funciones.inc.php");
     ?>
