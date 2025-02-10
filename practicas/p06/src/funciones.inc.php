@@ -56,3 +56,32 @@ if (isset($_GET['numero'])) {
 }
 
 ?>
+
+<h2>Ejercicio 4</h2>
+<p>Crear un arreglo cuyos índices van de 97 a 122 y cuyos valores son las letras de la ‘a’
+    a la ‘z’. Usa la función chr(n) que devuelve el caracter cuyo código ASCII es n para poner
+    el valor en cada índice.</p>
+
+<?php
+$abecedario = array();
+
+for ($i = 97; $i <= 122; $i++) {
+    $abecedario[$i] = chr($i);
+};
+
+echo "<table border=2>";
+echo '<tr>';
+$counter = 0;
+
+foreach ($abecedario as $valor => $char) {
+    if ($counter % 2 == 0 && $counter != 0) {
+        echo "</tr><tr>";
+    }
+
+    echo '<td>' . $valor . '</td>';
+    echo '<td>' . $char . '</td>';
+    $counter++;
+};
+echo '</table>';
+echo "</table>";
+?>
