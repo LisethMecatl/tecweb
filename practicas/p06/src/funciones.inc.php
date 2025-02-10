@@ -30,7 +30,29 @@ while ($impar1 % 2 != 1 || $par % 2 != 0 || $impar2 % 2 != 1) {
     $total_n = $total_n + 3;
 }
 
-echo "Se obtuvieron " . $total_n . " numeros con " . $iteracion . " ieracion(es)";
+echo "Se obtuvieron " . $total_n . " numeros con " . $iteracion . " iteracion(es)";
 echo '<br>';
 print_r($datos);
+echo '<br>';
+echo "Otra vista: ";
+echo "<pre>";
+print_r($datos);
+echo "</pre>";
+?>
+
+<h2>Ejercicio 3</h2>
+<p>Utiliza un ciclo while para encontrar el primer número entero obtenido aleatoriamente, pero que además sea múltiplo de un número dado.</p>
+<p>• Crear una variante de este script utilizando el ciclo do-while.</p>
+<p>• El número dado se debe obtener vía GET.</p>
+
+<?php
+
+if (isset($_GET['numero'])) {
+    do {
+        $num = $_GET['numero'];
+        $aleatorio = rand(1, 1000);
+    } while ($aleatorio % $num != 0);
+    echo '<h3>R= El número ' . $aleatorio . ' SÍ es múltiplo de '  . $num . '</h3>';
+}
+
 ?>
