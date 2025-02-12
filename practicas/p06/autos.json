@@ -1,0 +1,26 @@
+{
+    "LDW4576": {
+        "Auto": {
+            "marca": "nissan",
+            "modelo": "1990",
+            "tipo": "sedan"
+        },
+        "Propietario": {
+            "nombre": "juan",
+            "ciudad": "Puebla",
+            "direccion": "av morelos 23"
+        }
+    },
+    "RDW4576": {
+        "Auto": {
+            "marca": "nissan",
+            "modelo": "2000",
+            "tipo": "camioneta"
+        },
+        "Propietario": {
+            "nombre": "Pedro",
+            "ciudad": "Puebla",
+            "direccion": "5 de mayo 07"
+        }
+    }
+}

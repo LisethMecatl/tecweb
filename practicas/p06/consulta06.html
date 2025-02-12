@@ -1,0 +1,31 @@
+<!--Ejercicio 6 consultas de vehiculos-->
+<!--Importante abrir desde el servidor y no desde el editor o da problemas ya q no lee el php-->
+<!--http://localhost/tecweb/practicas/p06/consulta06.html-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Vehículos</title>
+</head>
+
+<body>
+    <h2>Consultar Vehículos</h2>
+    <!--Formulario de consulta por matricula, usa consultar06.php-->
+    <form action="consultar06.php" method="get">
+        <label for="matricula">Matrícula (opcional):</label>
+        <input type="text" id="matricula" name="matricula" pattern="[A-Z]{3}[0-9]{4}"><br><br>
+
+        <input type="submit" value="Consultar">
+    </form>
+
+    <h3>Ver todos los vehículos</h3>
+    <!--Formulario de consultar todos usa consultar06.php-->
+    <form action="consultar06.php" method="get">
+        <input type="hidden" name="todos" value="1">
+        <input type="submit" value="Ver todos">
+    </form>
+</body>
+
+</html>
