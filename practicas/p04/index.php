@@ -56,6 +56,22 @@
     ?>
 
     <p>Lo que sucedio aqui fue que a en un inicio tiene el valor de "ManejadorSQL" y b tiene el valor de 'MySQL', pero despues, con el segundo bloque de codigo a la vaiable $a se le asigna el valor de "PHP derver" y a la variable $b se le hace una referencia al valor de la variable $a, sin em bargo para este momento la variable $a tiene el valor de "MySQL" asi q al mostrar las dos variables ambas muestran "MySQL" </p>
+    <br />
+    <h2>Ejercicio 3</h2>
+    <p>Mostrar contenido de cada variable inmediatamente despues de cada asignacion, verificar la evolucion del tipo de estas variables (imprimir todos los componentes del arreglo)</p>
+    <?php
+    error_reporting(0);
+    $a = "PHP5" . '</br>';
+    echo $a;
+    $z[] = &$a;
+    var_dump($z);
+    $b = "5a version de PHP";
+    echo '</br>' . $b . '</br>';
+    $c = $b * 10;
+    $a .= $b;
+    $b *= $c;
+    $z[0] = "MySQL";
+    ?>
 </body>
 
 </html>
