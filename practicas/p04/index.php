@@ -61,16 +61,41 @@
     <p>Mostrar contenido de cada variable inmediatamente despues de cada asignacion, verificar la evolucion del tipo de estas variables (imprimir todos los componentes del arreglo)</p>
     <?php
     error_reporting(0);
-    $a = "PHP5" . '</br>';
+    $a = "PHP5";
+    echo '<p>--Impresion de variable a: </p>';
     echo $a;
+    echo '<br>';
+
     $z[] = &$a;
+    echo '<p>--Impresion de arreglo con variable a: </p>';
     var_dump($z);
+    echo '<br>';
+
+    echo '<p>--Impresion de variable b: </p>';
     $b = "5a version de PHP";
-    echo '</br>' . $b . '</br>';
+    echo $b;
+    echo '<br>';
+
     $c = $b * 10;
+    echo '<p>--Impresion de variable c: </p>';
+    echo  $c;
+    echo '<br>';
+
+    //El punto es un concatenados, concatena la variable a con el valor de la varianble b
     $a .= $b;
+    echo '<p>--Impresión de variable a concatenada con b:</p>';
+    echo  $a;
+    echo '<br>';
+
+    //multiplica la variable de la izquierda por el valor de la derecha y asigna el resultado a la variable de la izquierda.
     $b *= $c;
+    echo '<p>--Impresion de variable b multiplicada con c: </p>';
+    echo  $b;
+    echo '<br>';
+
     $z[0] = "MySQL";
+    echo '<p>--Impresion de arreglo z: </p>';
+    var_dump($z);
     ?>
 </body>
 
