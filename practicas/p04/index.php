@@ -97,6 +97,49 @@
     echo '<p>--Impresion de arreglo z: </p>';
     var_dump($z);
     ?>
+
+    <h2>Ejercicio 4</h2>
+    <p>Lee y muestra los valores de las variables del ejercicio anterior, pero ahora con la ayuda de
+        la matriz $GLOBALS o del modificador global de PHP.</p>
 </body>
+<!--uso de matriz $GLOBALS permite acceder a todas las variables globales de un script-->
+<?php
+$GLOBALS['a'] = "PHP5";
+echo '<p>--Impresion de variable a: </p>';
+echo $GLOBALS['a'];
+echo '<br>';
+
+$GLOBALS['z'][] = &$GLOBALS['a'];
+echo '<p>--Impresion de arreglo con variable a: </p>';
+var_dump($GLOBALS['z']);
+echo '<br>';
+
+$GLOBALS['b'] = "5a version de PHP";
+echo '<p>--Impresion de variable b: </p>';
+echo $GLOBALS['b'];
+echo '<br>';
+
+$GLOBALS['c'] = $GLOBALS['b'] * 10;
+echo '<p>--Impresion de variable c: </p>';
+echo $GLOBALS['c'];
+echo '<br>';
+
+// El punto es un concatenador, concatena la variable a con el valor de la variable b
+$GLOBALS['a'] .= $GLOBALS['b'];
+echo '<p>--Impresión de variable a concatenada con b:</p>';
+echo $GLOBALS['a'];
+echo '<br>';
+
+// Multiplica la variable de la izquierda por el valor de la derecha y asigna el resultado a la variable de la izquierda.
+$GLOBALS['b'] *= $GLOBALS['c'];
+echo '<p>--Impresion de variable b multiplicada con c: </p>';
+echo $GLOBALS['b'];
+echo '<br>';
+
+$GLOBALS['z'][0] = "MySQL";
+echo '<p>--Impresion de arreglo z: </p>';
+var_dump($GLOBALS['z']);
+?>
+
 
 </html>
