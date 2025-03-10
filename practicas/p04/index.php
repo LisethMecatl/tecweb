@@ -31,6 +31,10 @@
     echo '<li>$_element1 es válida porque inicia con guión bajo.</li>';
     echo '<li>$house*5 es inválida porque el símbolo * no está permitido.</li>';
     echo '</ul>';
+
+
+    unset($_myvar, $_7var, $myvar, $var7, $_element1);
+    ?>
     ?>
     <br />
     <h2>Ejercicio 2</h2>
@@ -53,10 +57,13 @@
     echo '<li>' . $a . '</li>';
     echo '<li>' . $b . '</li>';
     echo '</ul>';
+    unset($a, $b, $c);
     ?>
 
     <p>Lo que sucedio aqui fue que a en un inicio tiene el valor de "ManejadorSQL" y b tiene el valor de 'MySQL', pero despues, con el segundo bloque de codigo a la vaiable $a se le asigna el valor de "PHP derver" y a la variable $b se le hace una referencia al valor de la variable $a, sin em bargo para este momento la variable $a tiene el valor de "MySQL" asi q al mostrar las dos variables ambas muestran "MySQL" </p>
     <br />
+
+
     <h2>Ejercicio 3</h2>
     <p>Mostrar contenido de cada variable inmediatamente despues de cada asignacion, verificar la evolucion del tipo de estas variables (imprimir todos los componentes del arreglo)</p>
     <?php
@@ -96,6 +103,7 @@
     $z[0] = "MySQL";
     echo '<p>--Impresion de arreglo z: </p>';
     var_dump($z);
+    unset($a, $b, $c, $z);
     ?>
 
     <h2>Ejercicio 4</h2>
@@ -139,7 +147,28 @@ echo '<br>';
 $GLOBALS['z'][0] = "MySQL";
 echo '<p>--Impresion de arreglo z: </p>';
 var_dump($GLOBALS['z']);
-?>
 
+unset($GLOBALS['a'], $GLOBALS['b'], $GLOBALS['C'], $GLOBALS['Z']);
+?>
+<h2>Ejercicio 5</h2>
+<p>Dar el valor de las variables $a, $b, $c al final del siguiente script:</p>
+
+<?php
+$a = "7 personas";
+$b = (int) $a;
+$a = "9E3";
+$c = (float) $a;
+
+echo "<p>valor de a</p>" . $a;
+print "<p>valor de b</p>" . $b;
+print "<p>valor de c</p>" . $c;
+
+echo "<pre>";
+print_r(compact('a', 'b', 'c'));
+echo "</pre>";
+
+// Se liberan las variables
+unset($a, $b, $c);
+?>
 
 </html>
