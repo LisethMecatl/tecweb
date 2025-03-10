@@ -109,66 +109,97 @@
     <h2>Ejercicio 4</h2>
     <p>Lee y muestra los valores de las variables del ejercicio anterior, pero ahora con la ayuda de
         la matriz $GLOBALS o del modificador global de PHP.</p>
+    <!--uso de matriz $GLOBALS permite acceder a todas las variables globales de un script-->
+    <?php
+    $GLOBALS['a'] = "PHP5";
+    echo '<p>--Impresion de variable a: </p>';
+    echo $GLOBALS['a'];
+    echo '<br>';
+
+    $GLOBALS['z'][] = &$GLOBALS['a'];
+    echo '<p>--Impresion de arreglo con variable a: </p>';
+    var_dump($GLOBALS['z']);
+    echo '<br>';
+
+    $GLOBALS['b'] = "5a version de PHP";
+    echo '<p>--Impresion de variable b: </p>';
+    echo $GLOBALS['b'];
+    echo '<br>';
+
+    $GLOBALS['c'] = $GLOBALS['b'] * 10;
+    echo '<p>--Impresion de variable c: </p>';
+    echo $GLOBALS['c'];
+    echo '<br>';
+
+    // El punto es un concatenador, concatena la variable a con el valor de la variable b
+    $GLOBALS['a'] .= $GLOBALS['b'];
+    echo '<p>--Impresión de variable a concatenada con b:</p>';
+    echo $GLOBALS['a'];
+    echo '<br>';
+
+    // Multiplica la variable de la izquierda por el valor de la derecha y asigna el resultado a la variable de la izquierda.
+    $GLOBALS['b'] *= $GLOBALS['c'];
+    echo '<p>--Impresion de variable b multiplicada con c: </p>';
+    echo $GLOBALS['b'];
+    echo '<br>';
+
+    $GLOBALS['z'][0] = "MySQL";
+    echo '<p>--Impresion de arreglo z: </p>';
+    var_dump($GLOBALS['z']);
+
+    unset($GLOBALS['a'], $GLOBALS['b'], $GLOBALS['C'], $GLOBALS['Z']);
+    ?>
+    <h2>Ejercicio 5</h2>
+    <p>Dar el valor de las variables $a, $b, $c al final del siguiente script:</p>
+
+    <?php
+    $a = "7 personas";
+    $b = (int) $a;
+    $a = "9E3";
+    $c = (float) $a;
+
+    echo "<p>valor de a</p>" . $a;
+    print "<p>valor de b</p>" . $b;
+    print "<p>valor de c</p>" . $c;
+
+    echo "<pre>";
+    print_r(compact('a', 'b', 'c'));
+    echo "</pre>";
+
+    // Se liberan las variables
+    unset($a, $b, $c);
+    ?>
+
+
+
+    <h2>Ejercicio 6</h2>
+    <p>Dar y comprobar el valor booleano de las variables $a, $b, $c, $d, $e y $f y muéstralas
+        usando la función var_dump("etiqueta de datos").
+        Después investiga una función de PHP que permita transformar el valor booleano de $c y $e
+        en uno que se pueda mostrar con un echo:</p>
+    <?php
+    $a = "0";
+    $b = "TRUE";
+    $c = FALSE;
+    $d = ($a or $b);
+    $e = ($a and $c);
+    $f = ($a xor $b);
+
+    echo "<pre>";
+    var_dump($a, $b, $c, $d, $e, $f);
+    echo "</pre>";
+
+    echo "conversion:<br>";
+    $c_cadena = $c ? 'true' : 'false';
+    $e_cadena = $e ? 'true' : 'false';
+
+    echo "c = $c_cadena<br>";
+    echo "e = $e_cadena<br>";
+
+
+    unset($a, $b, $c, $d, $e, $f);
+    ?>
+
 </body>
-<!--uso de matriz $GLOBALS permite acceder a todas las variables globales de un script-->
-<?php
-$GLOBALS['a'] = "PHP5";
-echo '<p>--Impresion de variable a: </p>';
-echo $GLOBALS['a'];
-echo '<br>';
-
-$GLOBALS['z'][] = &$GLOBALS['a'];
-echo '<p>--Impresion de arreglo con variable a: </p>';
-var_dump($GLOBALS['z']);
-echo '<br>';
-
-$GLOBALS['b'] = "5a version de PHP";
-echo '<p>--Impresion de variable b: </p>';
-echo $GLOBALS['b'];
-echo '<br>';
-
-$GLOBALS['c'] = $GLOBALS['b'] * 10;
-echo '<p>--Impresion de variable c: </p>';
-echo $GLOBALS['c'];
-echo '<br>';
-
-// El punto es un concatenador, concatena la variable a con el valor de la variable b
-$GLOBALS['a'] .= $GLOBALS['b'];
-echo '<p>--Impresión de variable a concatenada con b:</p>';
-echo $GLOBALS['a'];
-echo '<br>';
-
-// Multiplica la variable de la izquierda por el valor de la derecha y asigna el resultado a la variable de la izquierda.
-$GLOBALS['b'] *= $GLOBALS['c'];
-echo '<p>--Impresion de variable b multiplicada con c: </p>';
-echo $GLOBALS['b'];
-echo '<br>';
-
-$GLOBALS['z'][0] = "MySQL";
-echo '<p>--Impresion de arreglo z: </p>';
-var_dump($GLOBALS['z']);
-
-unset($GLOBALS['a'], $GLOBALS['b'], $GLOBALS['C'], $GLOBALS['Z']);
-?>
-<h2>Ejercicio 5</h2>
-<p>Dar el valor de las variables $a, $b, $c al final del siguiente script:</p>
-
-<?php
-$a = "7 personas";
-$b = (int) $a;
-$a = "9E3";
-$c = (float) $a;
-
-echo "<p>valor de a</p>" . $a;
-print "<p>valor de b</p>" . $b;
-print "<p>valor de c</p>" . $c;
-
-echo "<pre>";
-print_r(compact('a', 'b', 'c'));
-echo "</pre>";
-
-// Se liberan las variables
-unset($a, $b, $c);
-?>
 
 </html>
