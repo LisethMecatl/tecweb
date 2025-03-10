@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario productos</title>
+    <link rel="stylesheet" href="formulariocss.css">
+</head>
+
+<body>
+    <h1>Bienvenido al registro de productos</h1>
+    <form id="form_producto" action="http://localhost/tecweb/practicas/p08/set_producto_v2.php">
+        <fieldset>
+            <ul style="list-style-type: none;">
+                <li>
+                    <h1>Registra un producto</h1>
+                </li>
+                <li><label for="form-nombre">Ingresa el nombre del producto</label></li>
+                <li><input type="text" name="nombre" id="form-name"></li>
+                <br />
+                <li><label for="form-marca">Marca del producto:</label></li>
+                <li><input type="text" name="marca" id="form-marca"></li>
+                <br />
+                <li><label for="form-modelo">Modelo del producto:</label></li>
+                <li><input type="text" name="modelo" id="form-modelo"></li>
+                <br />
+                <li><label for="form_precio">Precio</label></li>
+                <li><input type="number" id="form_precio" name="precio" min="1" max="10000" step="any"></li>
+                <br />
+                <li><label for="form-detalles">Detalles:</label></li>
+                <li><input type="text" name="detalles" id="form-detalles"></li>
+                <br />
+                <li><label for="form-unidades">Unidades:</label></li>
+                <li><input type="number" name="unidades" id="form-unidades" min="1" max="1000"></li>
+                <br />
+                <li><label for="form_img">Sube la imagen del producto</label></li>
+                <li><input multiple type="file" id="fileNewIssue"></li>
+                <img id="imagen" src="img/imagen.png" alt="Imagen por defecto" style="display:none;">
+                <br />
+                <li><input type="submit" value="Enviar"></li>
+
+            </ul>
+
+        </fieldset>
+    </form>
+</body>
+
+</html>

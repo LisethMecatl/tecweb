@@ -1,0 +1,64 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 5px;
+}
+
+label {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+
+label[for="fileNewIssue"] {
+    background-color: rgb(81, 150, 240);
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="number"] {
+    width: 50%;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: rgb(81, 150, 240);
+    outline: none;
+}
+
+fieldset {
+    border: 2px solid rgb(8, 64, 138);
+    border-radius: 4px;
+    padding: 25px;
+    background-color: #f9f9f9;
+}
+
+ul {
+    padding: 0;
+}
+
+input[type="submit"] {
+    background-color: rgb(14, 105, 26);
+    padding: 10px 20px;
+    border-radius: 4px;
+    border-color: white;
+    cursor: pointer;
+    color: white;
+}
+
+h1 {
+    color: rgb(0, 51, 117);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
