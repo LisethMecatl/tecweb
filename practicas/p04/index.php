@@ -200,6 +200,18 @@
     unset($a, $b, $c, $d, $e, $f);
     ?>
 
+    <h2>Ejercicio 7</h2>
+    <p>Usando la variable predefinida $_SERVER, determina lo siguiente:
+        a. La versión de Apache y PHP,
+        b. El nombre del sistema operativo (servidor),
+        c. El idioma del navegador (cliente).</p>
+
+    <?php
+    echo "version Apache y PHP:  " . $_SERVER['SERVER_SOFTWARE'] . "<br>";
+    echo "Servidor:  " . PHP_OS . "<br>";
+    echo "Idioma cliente:  " . $_SERVER['HTTP_ACCEPT_LANGUAGE'] . "<br>";
+    echo "Nombre de mi servidor:  " . $_SERVER['SERVER_NAME'] . "<br>";
+    ?>
 </body>
 
 </html>
