@@ -23,6 +23,7 @@ $precio = $_POST['precio'] ?? '';
 $detalles = $_POST['detalles'] ?? '';
 $unidades = $_POST['unidades'] ?? 0;
 $imagen = 'p08/img/imagen.png';
+$eliminado = 0;
 
 
 //validacion de campos no vacios
@@ -44,10 +45,23 @@ if ($stmt->num_rows > 0) {
 }
 $stmt->close();
 
+
+
 // Insertar el producto si no existe
-$sql_insert = "INSERT INTO productos (nombre, marca, modelo, precio, detalles, unidades, imagen) VALUES (?, ?, ?, ?, ?, ?, ?)";
+/*$sql_insert = "INSERT INTO productos (nombre, marca, modelo, precio, detalles, unidades, imagen) VALUES (?, ?, ?, ?, ?, ?, ?)";
 $stmt = $link->prepare($sql_insert);
 $stmt->bind_param("sssdsis", $nombre, $marca, $modelo, $precio, $detalles, $unidades, $imagen);
+*/
+
+
+// Nueva query con nombres de columnas, sin incluir id ni eliminado
+$sql_insert = "INSERT INTO productos 
+               (nombre, marca, modelo, precio, detalles, unidades, imagen) 
+               VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+$stmt = $link->prepare($sql_insert);
+$stmt->bind_param("sssdsis", $nombre, $marca, $modelo, $precio, $detalles, $unidades, $imagen);
+
 
 if ($stmt->execute()) {
     echo "<h3>Producto registrado correctamente</h3>";
