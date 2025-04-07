@@ -1,0 +1,74 @@
+<catalogoVOD>
+    <cuenta>
+        <correo>
+        </correo>
+        <perfiles>
+            <perfil>
+                <usuario>Juan</usuario>
+                <idioma>Ingles</idioma>
+            </perfil>
+            <perfil>
+                <usuario>Maria</usuario>
+                <idioma>Español</idioma>
+            </perfil>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero>
+                <nombre>drama</nombre>
+                <titulo>
+                    <nombre>Elisa yo y mi otro yo</nombre>
+                    <duracion>2 horas</duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>terror</nombre>
+                <titulo>
+                     <nombre>IT</nombre>
+                    <duracion>1:50 horas</duracion>
+                </titulo>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero>
+                <nombre>genero 1</nombre>
+                <titulo>
+                    <nombre>La comedia</nombre>
+                    <duracion>2 horas</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Crom</nombre>
+                    <duracion>1 hora y media</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Mary y sus dibujo</nombre>
+                    <duracion>1 hora y media</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Conexion entre celulas</nombre>
+                    <duracion>1 hora</duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>genero 2</nombre>
+                <titulo>
+                    <nombre>ceros y unos</nombre>
+                    <duracion>1:20 horas</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>conexion de datos</nombre>
+                    <duracion>1:40 horas</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Mas que IA</nombre>
+                    <duracion>una hora y media</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Todo sobre computadoras</nombre>
+                    <duracion>2:00 horas</duracion>
+                </titulo>
+            </genero>
+        </programas>
+    </contenido>
+</catalogoVOD>

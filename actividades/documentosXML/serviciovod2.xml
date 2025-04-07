@@ -1,0 +1,54 @@
+<catalogoVOD>
+    <cuenta correo="correo@correo.com">
+        <perfiles>
+            <perfil usuario="Juan" idioma="Ingles">
+            </perfil>
+            <perfil  usuario="Maria" idioma="español">
+            </perfil>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero nombre="drama">
+                <titulo>
+                    <nombre duracion="2 horas">Elisa yo y mi otro yo</nombre>
+                </titulo>
+            </genero>
+            <genero nombre="terror">
+                <titulo>
+                    <nombre duracion="1:50 horas">IT</nombre>
+                </titulo>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero nombre="drama">
+                <titulo>
+                    <nombre duracion="2 horas">La comedia</nombre>
+                </titulo>
+                <titulo>
+                    <nombre duracion="1 hora y media">Crom</nombre>
+                </titulo>
+                <titulo>
+                    <nombre duracion="1 hora y media">Mary y sus dibujo</nombre>
+                </titulo>
+                <titulo>
+                    <nombre duracion="1 hora">Conexion entre celulas</nombre>
+                </titulo>
+            </genero>
+            <genero nombre="cientifico">
+                <titulo>
+                    <nombre duracion="1:20 horas">ceros y unos</nombre>
+                </titulo>
+                <titulo>
+                    <nombre duracion="1:40 horas">conexion de datos</nombre>
+                </titulo>
+                <titulo>
+                    <nombre duracion="1:30 horas">Mas que IA</nombre>
+                </titulo>
+                <titulo>
+                    <nombre duracion="2:00 horas">Todo sobre computadoras</nombre>
+                </titulo>
+            </genero>
+        </programas>
+    </contenido>
+</catalogoVOD>
