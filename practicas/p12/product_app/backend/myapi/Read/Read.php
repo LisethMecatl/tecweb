@@ -1,10 +1,14 @@
 <?php
 
-namespace TECWEB\MYAPI\READ;
+#namespace TECWEB\MYAPI\READ;
+#require_once __DIR__ . '/../Database.php';
+#use TECWEB\MYAPI\DataBase;
+
+namespace myapi\Read;
 
 require_once __DIR__ . '/../Database.php';
 
-use TECWEB\MYAPI\DataBase;
+use myapi\Database;
 
 class Read extends DataBase
 {

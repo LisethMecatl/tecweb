@@ -1,0 +1,19 @@
+{
+    "name": "tecweb/myapi",
+    "description": "clases api de productos",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "myapi\\": "backend/myapi/"
+        }
+    },
+    "authors": [
+        {
+            "name": "LisethMecatl",
+            "email": "mecatl.toxcoyoa.liseth.1a@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

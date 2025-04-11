@@ -1,10 +1,11 @@
 <?php
 
-namespace TECWEB\MYAPI\UPDATE;
+#namespace TECWEB\MYAPI\UPDATE;
+#require_once __DIR__ . '/../Database.php';
+#use TECWEB\MYAPI\DataBase;
+namespace myapi\Update;
 
-require_once __DIR__ . '/../Database.php';
-
-use TECWEB\MYAPI\DataBase;
+use myapi\Database;
 
 class Update extends DataBase
 {
